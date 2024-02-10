@@ -47,7 +47,7 @@ if (isset($_SESSION['user'])) {
         <button><a href="userdetails.php">User Details</a></button><br>
         <a href="./"><button>Log out</button></a>
     </div>
-    <div class="alert alert-warning alert-dismissible fade show" style="width: 100%;text-align: center;position: absolute;top: 0;" role="alert">
+    <div class="alert alert-warning alert-dismissible fade show" style="display: none;width: 100%;text-align: center;position: absolute;top: 0;" role="alert">
         <strong>Warning!</strong> Water tank level is less than 30%
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -68,7 +68,7 @@ if (isset($_SESSION['user'])) {
             <div class="middle-container" style="width: 70%;height: 100%">
                 <div class="panel-data" style="height: 50%;">
                     <div class="start-state first" style="padding: 10px;display: block;">
-                        <img src="brush.png" height="180" alt="brush">
+                        <img src="brush.png" style="height: 20vh" alt="brush">
                         <button onclick="changeState(1)">Start</button>
                     </div>
                     <div class="start-state second" style="display: none;width: 80%; padding: 30px">
@@ -89,7 +89,7 @@ if (isset($_SESSION['user'])) {
                     <div class="start-state third" style="display: none;">
                         <button onclick="changeState(1)"
                             style="padding: 5px 10px;background: white;color: black;font-size: 15px;width: fit-content;">
-                            << /button>
+                            <</button>
                                 <p>Remaining Time: <span class="h"></span> Hours<span class="m"></span> Min</p>
                     </div>
                 </div>

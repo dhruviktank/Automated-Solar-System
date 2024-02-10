@@ -64,9 +64,9 @@ if (isset($_SESSION['user'])) {
                 <h3 style='text-align: center;color: rgba(13, 110, 253, 1);'>Solar Panel Cleaning System</h3>
             </div>
         </div>
-        <div class="body-container" style="display: flex;height: 70vh;">
-            <div class="middle-container" style="width: 70%;height: 100%">
-                <div class="panel-data" style="height: 50%;">
+        <div class="body-container" style="display: flex;height: 68vh;">
+            <div class="middle-container" style="width: 70%;height: 90%">
+                <div class="panel-data" style="height: 260px">
                     <div class="start-state first" style="padding: 10px;display: block;">
                         <img src="brush.png" style="height: 20vh" alt="brush">
                         <button onclick="changeState(1)">Start</button>
@@ -74,7 +74,7 @@ if (isset($_SESSION['user'])) {
                     <div class="start-state second" style="display: none;width: 80%; padding: 30px">
                         <button onclick="changeState(0)"
                             style="padding: 5px;background: white;color: black;font-size: 15px;width: fit-content;">
-                            << /button>
+                            <</button>
                                 <br>
                                 <label for="duration">duration: </label>
                                 <select name="duration" id="duration" style="width: 200px;margin: 10px 0;">
@@ -93,7 +93,7 @@ if (isset($_SESSION['user'])) {
                                 <p>Remaining Time: <span class="h"></span> Hours<span class="m"></span> Min</p>
                     </div>
                 </div>
-                <div style="height: 50%;">
+                <div>
                     <p style="text-align: center;padding: 5px 0;font-size: 18px">Cleaning
                         History</p>
                     <p style="text-align: center;">Last cleaned at:
@@ -114,7 +114,7 @@ if (isset($_SESSION['user'])) {
                 </div>
             </div>
         </div>
-        <div class="footer" style="height: 20vh;display: flex;">
+        <div class="footer" style="height: 18vh;display: flex;">
             <div style="width: 10%;padding-top: 15px;">
                 <p>copyright@2024</p>
             </div>
@@ -122,7 +122,7 @@ if (isset($_SESSION['user'])) {
                 <p>Next Cleaning time:
                     <?= $nextClenaTime ?>
                 </p>
-                <img src="Doorbell.png" alt="doorbell">
+                <img src="Doorbell.png" style="height: 70%;" alt="doorbell">
             </div>
             <div class="tank-level" style="width: 30%;padding: 15px;">
                 <p>Water tank level:
@@ -134,7 +134,7 @@ if (isset($_SESSION['user'])) {
                 </div>
                 </p>
             </div>
-            <div class="feedback" style="width: 30%;box-sizing: border-box;padding: 5px">
+            <div class="feedback" style="width: 30%;box-sizing: border-box;">
                 <p style="text-align: center;">Feedbacks</p>
                 <form action="" method="post" style="text-align: center">
                     <input style="box-sizing:border-box;width: 95%;padding: 5px;" type="text" name="" id=""><br>

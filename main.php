@@ -47,6 +47,10 @@ if (isset($_SESSION['user'])) {
         <button><a href="userdetails.php">User Details</a></button><br>
         <a href="./"><button>Log out</button></a>
     </div>
+    <div class="alert alert-warning alert-dismissible fade show" style="width: 100%;text-align: center;position: absolute;top: 0;" role="alert">
+        <strong>Warning!</strong> Water tank level is less than 30%
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     <div class="">
         <div class="header" style="height: 10vh;display: flex;align-items: center;">
             <div class="logo-container"
@@ -70,22 +74,22 @@ if (isset($_SESSION['user'])) {
                     <div class="start-state second" style="display: none;width: 80%; padding: 30px">
                         <button onclick="changeState(0)"
                             style="padding: 5px;background: white;color: black;font-size: 15px;width: fit-content;">
-                            <</button>
-                            <br>
-                        <label for="duration">duration: </label>
-                        <select name="duration" id="duration" style="width: 200px;margin: 10px 0;">
-                            <option value="15">15 Minute</option>
-                            <option value="25">25 Minute</option>
-                            <option value="30">30 Minute</option>
-                        </select><br>
-                        <label for="time">Time: </label>
-                        <input type="time" required name="" id="time">
-                        <input type="submit" onclick="getTimer()" value="Set">
+                            << /button>
+                                <br>
+                                <label for="duration">duration: </label>
+                                <select name="duration" id="duration" style="width: 200px;margin: 10px 0;">
+                                    <option value="15">15 Minute</option>
+                                    <option value="25">25 Minute</option>
+                                    <option value="30">30 Minute</option>
+                                </select><br>
+                                <label for="time">Time: </label>
+                                <input type="time" required name="" id="time">
+                                <input type="submit" onclick="getTimer()" value="Set">
                     </div>
                     <div class="start-state third" style="display: none;">
                         <button onclick="changeState(1)"
                             style="padding: 5px 10px;background: white;color: black;font-size: 15px;width: fit-content;">
-                            <</button>
+                            << /button>
                                 <p>Remaining Time: <span class="h"></span> Hours<span class="m"></span> Min</p>
                     </div>
                 </div>
@@ -106,7 +110,7 @@ if (isset($_SESSION['user'])) {
                     </p>
                 </div>
                 <div class="start" style="padding: 30px;height: 60%;">
-                    
+
                 </div>
             </div>
         </div>
@@ -141,6 +145,8 @@ if (isset($_SESSION['user'])) {
     </div>
 
     <script>
+        var alert = document.getElementById('tank-alert');
+        
         function getTimer() {
             calculateTime();
             var x = setInterval(calculateTime(), 60000)

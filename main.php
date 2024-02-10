@@ -54,7 +54,7 @@ if (isset($_SESSION['user'])) {
     <div class="">
         <div class="header" style="height: 10vh;display: flex;align-items: center;">
             <div class="logo-container"
-                style="padding: 10px;border-radius: 10px;border: 3px solid rgba(13, 110, 253, 1);display: flex;justify-content: space-between;align-items: center">
+                style="margin: 5px;padding: 10px;border-radius: 10px;display: flex;justify-content: space-between;align-items: center">
                 <img height="40px" src="logo.jpg" alt="">
                 <div id="menu-btn">
                     <img height="40px" src="Menu.png" alt="">
@@ -137,8 +137,8 @@ if (isset($_SESSION['user'])) {
             <div class="feedback" style="width: 30%;box-sizing: border-box;">
                 <p style="text-align: center;">Feedbacks</p>
                 <form action="" method="post" style="text-align: center">
-                    <input style="box-sizing:border-box;width: 95%;padding: 5px;" type="text" name="" id=""><br>
-                    <input style="padding: 5px;" type="submit" value="Submit">
+                    <input style="box-sizing:border-box;width: 50%;padding: 5px;margin: 0;" type="text" name="" id=""><br>
+                    <input style="padding: 5px;margin:5px;width: 50%" type="submit" value="Submit">
                 </form>
             </div>
         </div>
